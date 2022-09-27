@@ -25,4 +25,31 @@ export const MainContainer = styled.div`
         background-color: ${Colors.primaryLight} !important;
         border-color: ${Colors.primaryLight};
     }
+
+    .sidebar-enabled {
+        width: 288px !important;
+        position: fixed;
+    }
+
+    .sidebar-disabled {
+        width: 0px !important;
+    }
+
+    .navbar {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+    }
+
+    .navbar-enabled {
+        min-height: 100px;
+        width: 100%;
+        margin-left: 288px;
+    }
+
+    .navbar-disabled {
+        min-height: 100px;
+        width: 100%;
+        margin-left: 0px;
+    }
 `;

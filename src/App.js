@@ -4,9 +4,11 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import * as s from './App.styles.js';
 
-import Button from './components/Button.js';
+import { Navbar, Sidebar, Button } from './components';
 
 function App() {
+  const activeMenu = true;
+
   return (
     <BrowserRouter>
       <s.MainContainer>
@@ -17,6 +19,26 @@ function App() {
                 <FiSettings />
               </button>
             </TooltipComponent>
+          </div>
+          {activeMenu ? (
+            <div className='sidebar-enabled sidebar' style={{ background: 'white' }}>
+              <Sidebar />
+            </div>
+          ) : (
+            <div className='sidebar-disabled'>
+              <Sidebar />
+            </div>
+          )}
+          <div className={`${activeMenu ? 'navbar-enabled' : 'navbar-disabled'}`}>
+            <div className='navbar'>
+              <Navbar />
+            </div>
+          </div>
+
+          <div>
+            <Routes>
+              <Route path='/' element='home' />
+            </Routes>
           </div>
         </div>
       </s.MainContainer>

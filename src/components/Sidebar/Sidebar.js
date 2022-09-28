@@ -18,6 +18,11 @@ const Sidebar = () => {
                         <Link className='link' to='/' onClick={() => {}}>
                             <SiShopware /> <span>Shoppy</span>
                         </Link>
+                        <TooltipComponent content='Menu' position='BottomCenter'>
+                            <button className='close-sidebar' type='button' onClick={() => {}}>
+                                <MdOutlineCancel style={{ display: 'block' }}/>
+                            </button>
+                        </TooltipComponent>
                     </div>
                 </>
             )}
